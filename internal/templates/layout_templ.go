@@ -96,7 +96,7 @@ func Head() templ.Component {
 			templ_7745c5c3_Var4 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "<head><meta charset=\"utf-8\"><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"><title>Index - Company Bootstrap Template</title><meta name=\"description\" content=\"\"><meta name=\"keywords\" content=\"\"><!-- Favicons --><link href=\"/static/assets/img/favicon.png\" rel=\"icon\"><link href=\"/static/assets/img/apple-touch-icon.png\" rel=\"apple-touch-icon\"><!-- Fonts --><link href=\"https://fonts.googleapis.com\" rel=\"preconnect\"><link href=\"https://fonts.gstatic.com\" rel=\"preconnect\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap\" rel=\"stylesheet\"><!-- Vendor CSS Files --><link href=\"/static/assets/vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/bootstrap-icons/bootstrap-icons.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/aos/aos.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/glightbox/css/glightbox.min.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/swiper/swiper-bundle.min.css\" rel=\"stylesheet\"><!-- Main CSS File --><link href=\"/static/assets/css/main.css\" rel=\"stylesheet\"><!-- =======================================================\r\n  * Template Name: Company\r\n  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/\r\n  * Updated: Aug 07 2024 with Bootstrap v5.3.3\r\n  * Author: BootstrapMade.com\r\n  * License: https://bootstrapmade.com/license/\r\n  ======================================================== --></head>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "<head><meta charset=\"utf-8\"><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"><title>Lemon Digital - Agency hàng đầu tại Việt Nam | Ecommerce Enabler</title><meta name=\"description\" content=\"Lemon Digital - Đối tác hàng đầu của TikTok, Shopee, Haravan và Lazada. Đồng hành cùng hơn 100 thương hiệu phát triển trên nền tảng số.\"><meta name=\"keywords\" content=\"Lemon Digital, Agency, TikTok, Shopee, eCommerce, Digital Marketing, Livestream, Quảng cáo\"><!-- Favicons --><link href=\"/static/assets/img/favicon.png\" rel=\"icon\"><link href=\"/static/assets/img/apple-touch-icon.png\" rel=\"apple-touch-icon\"><!-- Fonts --><link href=\"https://fonts.googleapis.com\" rel=\"preconnect\"><link href=\"https://fonts.gstatic.com\" rel=\"preconnect\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap\" rel=\"stylesheet\"><!-- Vendor CSS Files --><link href=\"/static/assets/vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/bootstrap-icons/bootstrap-icons.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/aos/aos.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/glightbox/css/glightbox.min.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/swiper/swiper-bundle.min.css\" rel=\"stylesheet\"><!-- Main CSS File --><link href=\"/static/assets/css/main.css\" rel=\"stylesheet\"><!-- =======================================================\r\n  * Template Name: Company\r\n  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/\r\n  * Updated: Aug 07 2024 with Bootstrap v5.3.3\r\n  * Author: BootstrapMade.com\r\n  * License: https://bootstrapmade.com/license/\r\n  ======================================================== --></head>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -125,32 +125,32 @@ func Header(currentPage string) templ.Component {
 			templ_7745c5c3_Var5 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "<header id=\"header\" class=\"header d-flex align-items-center sticky-top\"><div class=\"container position-relative d-flex align-items-center\"><a href=\"/\" class=\"logo d-flex align-items-center me-auto\"><h1 class=\"sitename\">Company</h1><span>.</span></a><nav id=\"navmenu\" class=\"navmenu\"><ul><li>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "<header id=\"header\" class=\"header d-flex align-items-center sticky-top\"><div class=\"container position-relative d-flex align-items-center\"><a href=\"/\" class=\"logo d-flex align-items-center me-auto\"><h1 class=\"sitename\">Lemon Digital</h1><span>.</span></a><nav id=\"navmenu\" class=\"navmenu\"><ul><li>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "home" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "<a href=\"/\" class=\"active\">Home</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "<a href=\"/\" class=\"active\">Trang chủ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "<a href=\"/\" class=\"\">Home</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "<a href=\"/\" class=\"\">Trang chủ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, "</li><li class=\"dropdown\"><a href=\"/about\" class=\"\"><span>About</span> <i class=\"bi bi-chevron-down toggle-dropdown\"></i></a><ul><li><a href=\"/team\" class=\"\">Team</a></li><li><a href=\"/testimonials\" class=\"\">Testimonials</a></li></ul></li><li>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, "</li><li class=\"dropdown\"><a href=\"/about\" class=\"\"><span>Về chúng tôi</span> <i class=\"bi bi-chevron-down toggle-dropdown\"></i></a><ul><li><a href=\"/team\" class=\"\">Đội ngũ</a></li><li><a href=\"/testimonials\" class=\"\">Khách hàng nói gì</a></li></ul></li><li>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "service" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 9, "<a href=\"/service\" class=\"active\">Services</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 9, "<a href=\"/service\" class=\"active\">Dịch vụ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "<a href=\"/service\" class=\"\">Services</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "<a href=\"/service\" class=\"\">Dịch vụ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -160,12 +160,12 @@ func Header(currentPage string) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "portfolio" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "<a href=\"/portfolio\" class=\"active\">Portfolio</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "<a href=\"/portfolio\" class=\"active\">Dự án</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 13, "<a href=\"/portfolio\" class=\"\">Portfolio</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 13, "<a href=\"/portfolio\" class=\"\">Dự án</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -175,12 +175,12 @@ func Header(currentPage string) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "pricing" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 15, "<a href=\"/pricing\" class=\"active\">Pricing</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 15, "<a href=\"/pricing\" class=\"active\">Bảng giá</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 16, "<a href=\"/pricing\" class=\"\">Pricing</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 16, "<a href=\"/pricing\" class=\"\">Bảng giá</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -190,12 +190,12 @@ func Header(currentPage string) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "blog" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 18, "<a href=\"/blog\" class=\"active\">Blog</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 18, "<a href=\"/blog\" class=\"active\">Tin tức</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 19, "<a href=\"/blog\" class=\"\">Blog</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 19, "<a href=\"/blog\" class=\"\">Tin tức</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -205,12 +205,12 @@ func Header(currentPage string) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "contact" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 21, "<a href=\"/contact\" class=\"active\">Contact</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 21, "<a href=\"/contact\" class=\"active\">Liên hệ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 22, "<a href=\"/contact\" class=\"\">Contact</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 22, "<a href=\"/contact\" class=\"\">Liên hệ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -244,7 +244,7 @@ func Footer() templ.Component {
 			templ_7745c5c3_Var6 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 24, "<footer id=\"footer\" class=\"footer dark-background\"><div class=\"container footer-top\"><div class=\"row gy-4\"><div class=\"col-lg-4 col-md-6 footer-about\"><a href=\"index.html\" class=\"logo d-flex align-items-center\"><span class=\"sitename\">Company</span></a><div class=\"footer-contact pt-3\"><p>A108 Adam Street</p><p>New York, NY 535022</p><p class=\"mt-3\"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p><p><strong>Email:</strong> <span>info@example.com</span></p></div><div class=\"social-links d-flex mt-4\"><a href=\"\"><i class=\"bi bi-twitter-x\"></i></a> <a href=\"\"><i class=\"bi bi-facebook\"></i></a> <a href=\"\"><i class=\"bi bi-instagram\"></i></a> <a href=\"\"><i class=\"bi bi-linkedin\"></i></a></div></div><div class=\"col-lg-2 col-md-3 footer-links\"><h4>Useful Links</h4><ul><li><a href=\"#\">Home</a></li><li><a href=\"#\">About us</a></li><li><a href=\"#\">Services</a></li><li><a href=\"#\">Terms of service</a></li><li><a href=\"#\">Privacy policy</a></li></ul></div><div class=\"col-lg-2 col-md-3 footer-links\"><h4>Our Services</h4><ul><li><a href=\"#\">Web Design</a></li><li><a href=\"#\">Web Development</a></li><li><a href=\"#\">Product Management</a></li><li><a href=\"#\">Marketing</a></li><li><a href=\"#\">Graphic Design</a></li></ul></div><div class=\"col-lg-4 col-md-12 footer-newsletter\"><h4>Our Newsletter</h4><p>Subscribe to our newsletter and receive the latest news about our products and services!</p><form action=\"forms/newsletter.php\" method=\"post\" class=\"php-email-form\"><div class=\"newsletter-form\"><input type=\"email\" name=\"email\"><input type=\"submit\" value=\"Subscribe\"></div><div class=\"loading\">Loading</div><div class=\"error-message\"></div><div class=\"sent-message\">Your subscription request has been sent. Thank you!</div></form></div></div></div><div class=\"container copyright text-center mt-4\"><p>© <span>Copyright</span> <strong class=\"px-1 sitename\">Company</strong> <span>All Rights Reserved</span></p><div class=\"credits\"><!-- All the links in the footer should remain intact. --><!-- You can delete the links only if you've purchased the pro version. --><!-- Licensing information: https://bootstrapmade.com/license/ --><!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] --></div></div></footer><!-- Scroll Top --><a href=\"#\" id=\"scroll-top\" class=\"scroll-top d-flex align-items-center justify-content-center\"><i class=\"bi bi-arrow-up-short\"></i></a><!-- Preloader --><div id=\"preloader\"></div><!-- Vendor JS Files --><script src=\"/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js\"></script><script src=\"/static/assets/vendor/php-email-form/validate.js\"></script><script src=\"/static/assets/vendor/aos/aos.js\"></script><script src=\"/static/assets/vendor/glightbox/js/glightbox.min.js\"></script><script src=\"/static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js\"></script><script src=\"/static/assets/vendor/isotope-layout/isotope.pkgd.min.js\"></script><script src=\"/static/assets/vendor/waypoints/noframework.waypoints.js\"></script><script src=\"/static/assets/vendor/swiper/swiper-bundle.min.js\"></script><!-- Main JS File --><script src=\"/static/assets/js/main.js\"></script>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 24, "<footer id=\"footer\" class=\"footer dark-background\"><div class=\"container footer-top\"><div class=\"row gy-4\"><div class=\"col-lg-4 col-md-6 footer-about\"><a href=\"index.html\" class=\"logo d-flex align-items-center\"><span class=\"sitename\">Lemon Digital</span></a><div class=\"footer-contact pt-3\"><p>Ecommerce Enabler</p><p>Agency hàng đầu tại Việt Nam</p><p class=\"mt-3\"><strong>Phone:</strong> <span>0938787735</span></p><p><strong>Email:</strong> <span>hi@lemondigital.vn</span></p></div><div class=\"social-links d-flex mt-4\"><a href=\"\"><i class=\"bi bi-twitter-x\"></i></a> <a href=\"\"><i class=\"bi bi-facebook\"></i></a> <a href=\"\"><i class=\"bi bi-instagram\"></i></a> <a href=\"\"><i class=\"bi bi-linkedin\"></i></a></div></div><div class=\"col-lg-2 col-md-3 footer-links\"><h4>Liên kết hữu ích</h4><ul><li><a href=\"#\">Trang chủ</a></li><li><a href=\"#\">Về chúng tôi</a></li><li><a href=\"#\">Dịch vụ</a></li><li><a href=\"#\">Điều khoản dịch vụ</a></li><li><a href=\"#\">Chính sách bảo mật</a></li></ul></div><div class=\"col-lg-2 col-md-3 footer-links\"><h4>Dịch vụ của chúng tôi</h4><ul><li><a href=\"#\">Set up gian hàng</a></li><li><a href=\"#\">Tư vấn eCommerce</a></li><li><a href=\"#\">Thuê studio & Host</a></li><li><a href=\"#\">Quảng cáo TikTok</a></li><li><a href=\"#\">Quảng cáo Shopee</a></li></ul></div><div class=\"col-lg-4 col-md-12 footer-newsletter\"><h4>Nhận tin tức từ chúng tôi</h4><p>Đăng ký để nhận những tin tức mới nhất về dịch vụ và kiến thức eCommerce!</p><form action=\"forms/newsletter.php\" method=\"post\" class=\"php-email-form\"><div class=\"newsletter-form\"><input type=\"email\" name=\"email\" placeholder=\"Email của bạn\"><input type=\"submit\" value=\"Đăng ký\"></div><div class=\"loading\">Đang xử lý</div><div class=\"error-message\"></div><div class=\"sent-message\">Cảm ơn bạn đã đăng ký nhận tin!</div></form></div></div></div><div class=\"container copyright text-center mt-4\"><p>© <span>Copyright</span> <strong class=\"px-1 sitename\">Lemon Digital</strong> <span>All Rights Reserved</span></p><div class=\"credits\"><!-- All the links in the footer should remain intact. --><!-- You can delete the links only if you've purchased the pro version. --><!-- Licensing information: https://bootstrapmade.com/license/ --><!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->Ecommerce Enabler | Best Enabler & TSP Of The Year</div></div></footer><!-- Scroll Top --><a href=\"#\" id=\"scroll-top\" class=\"scroll-top d-flex align-items-center justify-content-center\"><i class=\"bi bi-arrow-up-short\"></i></a><!-- Preloader --><div id=\"preloader\"></div><!-- Vendor JS Files --><script src=\"/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js\"></script><script src=\"/static/assets/vendor/php-email-form/validate.js\"></script><script src=\"/static/assets/vendor/aos/aos.js\"></script><script src=\"/static/assets/vendor/glightbox/js/glightbox.min.js\"></script><script src=\"/static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js\"></script><script src=\"/static/assets/vendor/isotope-layout/isotope.pkgd.min.js\"></script><script src=\"/static/assets/vendor/waypoints/noframework.waypoints.js\"></script><script src=\"/static/assets/vendor/swiper/swiper-bundle.min.js\"></script><!-- Main JS File --><script src=\"/static/assets/js/main.js\"></script>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
