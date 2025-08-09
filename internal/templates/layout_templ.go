@@ -8,9 +8,7 @@ package templates
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "go_studio/internal/models"
-
-func Layout(contents templ.Component, classBody string, currentPage string, seoData models.SEOData) templ.Component {
+func Layout(contents templ.Component, classBody string, currentPage string) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -31,7 +29,7 @@ func Layout(contents templ.Component, classBody string, currentPage string, seoD
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = Head(seoData).Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = Head().Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -77,7 +75,7 @@ func Layout(contents templ.Component, classBody string, currentPage string, seoD
 	})
 }
 
-func Head(seoData models.SEOData) templ.Component {
+func Head() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -98,147 +96,7 @@ func Head(seoData models.SEOData) templ.Component {
 			templ_7745c5c3_Var4 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "<head><meta charset=\"utf-8\"><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"><!-- SEO Meta Tags --><title>")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var5 string
-		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(seoData.Title)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/layout.templ`, Line: 20, Col: 24}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "</title><meta name=\"description\" content=\"")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var6 string
-		templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(seoData.Description)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/layout.templ`, Line: 21, Col: 56}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "\"><meta name=\"keywords\" content=\"")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var7 string
-		templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs(seoData.Keywords)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/layout.templ`, Line: 22, Col: 50}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "\"><!-- Open Graph Meta Tags --><meta property=\"og:title\" content=\"")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var8 string
-		templ_7745c5c3_Var8, templ_7745c5c3_Err = templ.JoinStringErrs(seoData.Title)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/layout.templ`, Line: 25, Col: 51}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var8))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, "\"><meta property=\"og:description\" content=\"")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var9 string
-		templ_7745c5c3_Var9, templ_7745c5c3_Err = templ.JoinStringErrs(seoData.Description)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/layout.templ`, Line: 26, Col: 63}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var9))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 9, "\"><meta property=\"og:image\" content=\"")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var10 string
-		templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(seoData.OGImage)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/layout.templ`, Line: 27, Col: 53}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "\"><meta property=\"og:url\" content=\"")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var11 string
-		templ_7745c5c3_Var11, templ_7745c5c3_Err = templ.JoinStringErrs(seoData.CanonicalURL)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/layout.templ`, Line: 28, Col: 56}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var11))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 11, "\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:site_name\" content=\"Lemon Digital\"><!-- Twitter Card Meta Tags --><meta name=\"twitter:card\" content=\"summary_large_image\"><meta name=\"twitter:title\" content=\"")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var12 string
-		templ_7745c5c3_Var12, templ_7745c5c3_Err = templ.JoinStringErrs(seoData.Title)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/layout.templ`, Line: 34, Col: 52}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var12))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "\"><meta name=\"twitter:description\" content=\"")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var13 string
-		templ_7745c5c3_Var13, templ_7745c5c3_Err = templ.JoinStringErrs(seoData.Description)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/layout.templ`, Line: 35, Col: 64}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var13))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 13, "\"><meta name=\"twitter:image\" content=\"")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var14 string
-		templ_7745c5c3_Var14, templ_7745c5c3_Err = templ.JoinStringErrs(seoData.OGImage)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/layout.templ`, Line: 36, Col: 54}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var14))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 14, "\"><!-- Structured Data -->")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		if seoData.Schema != "" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 15, "<script type=\"application/ld+json\">{ seoData.Schema }</script>")
-			if templ_7745c5c3_Err != nil {
-				return templ_7745c5c3_Err
-			}
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 16, "<!-- Favicons --><link href=\"/static/assets/img/favicon.png\" rel=\"icon\"><link href=\"/static/assets/img/apple-touch-icon.png\" rel=\"apple-touch-icon\"><!-- Fonts --><link href=\"https://fonts.googleapis.com\" rel=\"preconnect\"><link href=\"https://fonts.gstatic.com\" rel=\"preconnect\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap\" rel=\"stylesheet\"><!-- Vendor CSS Files --><link href=\"/static/assets/vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/bootstrap-icons/bootstrap-icons.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/aos/aos.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/glightbox/css/glightbox.min.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/swiper/swiper-bundle.min.css\" rel=\"stylesheet\"><!-- Main CSS File --><link href=\"/static/assets/css/main.css\" rel=\"stylesheet\"><!-- =======================================================\r\n  * Template Name: Company\r\n  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/\r\n  * Updated: Aug 07 2024 with Bootstrap v5.3.3\r\n  * Author: BootstrapMade.com\r\n  * License: https://bootstrapmade.com/license/\r\n  ======================================================== --></head>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "<head><meta charset=\"utf-8\"><meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\"><title>Lemon Digital - Agency hàng đầu tại Việt Nam | Ecommerce Enabler</title><meta name=\"description\" content=\"Lemon Digital - Đối tác hàng đầu của TikTok, Shopee, Haravan và Lazada. Đồng hành cùng hơn 100 thương hiệu phát triển trên nền tảng số.\"><meta name=\"keywords\" content=\"Lemon Digital, Agency, TikTok, Shopee, eCommerce, Digital Marketing, Livestream, Quảng cáo\"><!-- Favicons --><link href=\"/static/assets/img/favicon.png\" rel=\"icon\"><link href=\"/static/assets/img/apple-touch-icon.png\" rel=\"apple-touch-icon\"><!-- Fonts --><link href=\"https://fonts.googleapis.com\" rel=\"preconnect\"><link href=\"https://fonts.gstatic.com\" rel=\"preconnect\" crossorigin><link href=\"https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap\" rel=\"stylesheet\"><!-- Vendor CSS Files --><link href=\"/static/assets/vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/bootstrap-icons/bootstrap-icons.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/aos/aos.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/glightbox/css/glightbox.min.css\" rel=\"stylesheet\"><link href=\"/static/assets/vendor/swiper/swiper-bundle.min.css\" rel=\"stylesheet\"><!-- Main CSS File --><link href=\"/static/assets/css/main.css\" rel=\"stylesheet\"><!-- =======================================================\r\n  * Template Name: Company\r\n  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/\r\n  * Updated: Aug 07 2024 with Bootstrap v5.3.3\r\n  * Author: BootstrapMade.com\r\n  * License: https://bootstrapmade.com/license/\r\n  ======================================================== --></head>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -262,102 +120,102 @@ func Header(currentPage string) templ.Component {
 			}()
 		}
 		ctx = templ.InitializeContext(ctx)
-		templ_7745c5c3_Var15 := templ.GetChildren(ctx)
-		if templ_7745c5c3_Var15 == nil {
-			templ_7745c5c3_Var15 = templ.NopComponent
+		templ_7745c5c3_Var5 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var5 == nil {
+			templ_7745c5c3_Var5 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 17, "<header id=\"header\" class=\"header d-flex align-items-center sticky-top\"><div class=\"container position-relative d-flex align-items-center\"><a href=\"/\" class=\"logo d-flex align-items-center me-auto\"><h1 class=\"sitename\">Lemon Digital</h1><span>.</span></a><nav id=\"navmenu\" class=\"navmenu\"><ul><li>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "<header id=\"header\" class=\"header d-flex align-items-center sticky-top\"><div class=\"container position-relative d-flex align-items-center\"><a href=\"/\" class=\"logo d-flex align-items-center me-auto\"><h1 class=\"sitename\">Lemon Digital</h1><span>.</span></a><nav id=\"navmenu\" class=\"navmenu\"><ul><li>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "home" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 18, "<a href=\"/\" class=\"active\">Trang chủ</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "<a href=\"/\" class=\"active\">Trang chủ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 19, "<a href=\"/\" class=\"\">Trang chủ</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "<a href=\"/\" class=\"\">Trang chủ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 20, "</li><li class=\"dropdown\"><a href=\"/about\" class=\"\"><span>Về chúng tôi</span> <i class=\"bi bi-chevron-down toggle-dropdown\"></i></a><ul><li><a href=\"/team\" class=\"\">Đội ngũ</a></li><li><a href=\"/testimonials\" class=\"\">Khách hàng nói gì</a></li></ul></li><li>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, "</li><li class=\"dropdown\"><a href=\"/about\" class=\"\"><span>Về chúng tôi</span> <i class=\"bi bi-chevron-down toggle-dropdown\"></i></a><ul><li><a href=\"/team\" class=\"\">Đội ngũ</a></li><li><a href=\"/testimonials\" class=\"\">Khách hàng nói gì</a></li></ul></li><li>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "service" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 21, "<a href=\"/service\" class=\"active\">Dịch vụ</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 9, "<a href=\"/service\" class=\"active\">Dịch vụ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 22, "<a href=\"/service\" class=\"\">Dịch vụ</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "<a href=\"/service\" class=\"\">Dịch vụ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 23, "</li><li>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 11, "</li><li>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "portfolio" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 24, "<a href=\"/portfolio\" class=\"active\">Dự án</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 12, "<a href=\"/portfolio\" class=\"active\">Dự án</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 25, "<a href=\"/portfolio\" class=\"\">Dự án</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 13, "<a href=\"/portfolio\" class=\"\">Dự án</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 26, "</li><li>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 14, "</li><li>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "pricing" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 27, "<a href=\"/pricing\" class=\"active\">Bảng giá</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 15, "<a href=\"/pricing\" class=\"active\">Bảng giá</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 28, "<a href=\"/pricing\" class=\"\">Bảng giá</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 16, "<a href=\"/pricing\" class=\"\">Bảng giá</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 29, "</li><li>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 17, "</li><li>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "blog" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 30, "<a href=\"/blog\" class=\"active\">Tin tức</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 18, "<a href=\"/blog\" class=\"active\">Tin tức</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 31, "<a href=\"/blog\" class=\"\">Tin tức</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 19, "<a href=\"/blog\" class=\"\">Tin tức</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 32, "</li><li>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 20, "</li><li>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		if currentPage == "contact" {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 33, "<a href=\"/contact\" class=\"active\">Liên hệ</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 21, "<a href=\"/contact\" class=\"active\">Liên hệ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 34, "<a href=\"/contact\" class=\"\">Liên hệ</a>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 22, "<a href=\"/contact\" class=\"\">Liên hệ</a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 35, "</li></ul><i class=\"mobile-nav-toggle d-xl-none bi bi-list\"></i></nav></div></header>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 23, "</li></ul><i class=\"mobile-nav-toggle d-xl-none bi bi-list\"></i></nav></div></header>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -381,12 +239,12 @@ func Footer() templ.Component {
 			}()
 		}
 		ctx = templ.InitializeContext(ctx)
-		templ_7745c5c3_Var16 := templ.GetChildren(ctx)
-		if templ_7745c5c3_Var16 == nil {
-			templ_7745c5c3_Var16 = templ.NopComponent
+		templ_7745c5c3_Var6 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var6 == nil {
+			templ_7745c5c3_Var6 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 36, "<footer id=\"footer\" class=\"footer dark-background\"><div class=\"container footer-top\"><div class=\"row gy-4\"><div class=\"col-lg-4 col-md-6 footer-about\"><a href=\"index.html\" class=\"logo d-flex align-items-center\"><span class=\"sitename\">Lemon Digital</span></a><div class=\"footer-contact pt-3\"><p>Ecommerce Enabler</p><p>Agency hàng đầu tại Việt Nam</p><p class=\"mt-3\"><strong>Phone:</strong> <span>0938787735</span></p><p><strong>Email:</strong> <span>hi@lemondigital.vn</span></p></div><div class=\"social-links d-flex mt-4\"><a href=\"\"><i class=\"bi bi-twitter-x\"></i></a> <a href=\"\"><i class=\"bi bi-facebook\"></i></a> <a href=\"\"><i class=\"bi bi-instagram\"></i></a> <a href=\"\"><i class=\"bi bi-linkedin\"></i></a></div></div><div class=\"col-lg-2 col-md-3 footer-links\"><h4>Liên kết hữu ích</h4><ul><li><a href=\"#\">Trang chủ</a></li><li><a href=\"#\">Về chúng tôi</a></li><li><a href=\"#\">Dịch vụ</a></li><li><a href=\"#\">Điều khoản dịch vụ</a></li><li><a href=\"#\">Chính sách bảo mật</a></li></ul></div><div class=\"col-lg-2 col-md-3 footer-links\"><h4>Dịch vụ của chúng tôi</h4><ul><li><a href=\"#\">Set up gian hàng</a></li><li><a href=\"#\">Tư vấn eCommerce</a></li><li><a href=\"#\">Thuê studio & Host</a></li><li><a href=\"#\">Quảng cáo TikTok</a></li><li><a href=\"#\">Quảng cáo Shopee</a></li></ul></div><div class=\"col-lg-4 col-md-12 footer-newsletter\"><h4>Nhận tin tức từ chúng tôi</h4><p>Đăng ký để nhận những tin tức mới nhất về dịch vụ và kiến thức eCommerce!</p><form action=\"forms/newsletter.php\" method=\"post\" class=\"php-email-form\"><div class=\"newsletter-form\"><input type=\"email\" name=\"email\" placeholder=\"Email của bạn\"><input type=\"submit\" value=\"Đăng ký\"></div><div class=\"loading\">Đang xử lý</div><div class=\"error-message\"></div><div class=\"sent-message\">Cảm ơn bạn đã đăng ký nhận tin!</div></form></div></div></div><div class=\"container copyright text-center mt-4\"><p>© <span>Copyright</span> <strong class=\"px-1 sitename\">Lemon Digital</strong> <span>All Rights Reserved</span></p><div class=\"credits\"><!-- All the links in the footer should remain intact. --><!-- You can delete the links only if you've purchased the pro version. --><!-- Licensing information: https://bootstrapmade.com/license/ --><!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->Ecommerce Enabler | Best Enabler & TSP Of The Year</div></div></footer><!-- Scroll Top --><a href=\"#\" id=\"scroll-top\" class=\"scroll-top d-flex align-items-center justify-content-center\"><i class=\"bi bi-arrow-up-short\"></i></a><!-- Preloader --><div id=\"preloader\"></div><!-- Vendor JS Files --><script src=\"/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js\"></script><script src=\"/static/assets/vendor/php-email-form/validate.js\"></script><script src=\"/static/assets/vendor/aos/aos.js\"></script><script src=\"/static/assets/vendor/glightbox/js/glightbox.min.js\"></script><script src=\"/static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js\"></script><script src=\"/static/assets/vendor/isotope-layout/isotope.pkgd.min.js\"></script><script src=\"/static/assets/vendor/waypoints/noframework.waypoints.js\"></script><script src=\"/static/assets/vendor/swiper/swiper-bundle.min.js\"></script><!-- Main JS File --><script src=\"/static/assets/js/main.js\"></script>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 24, "<footer id=\"footer\" class=\"footer dark-background\"><div class=\"container footer-top\"><div class=\"row gy-4\"><div class=\"col-lg-4 col-md-6 footer-about\"><a href=\"index.html\" class=\"logo d-flex align-items-center\"><span class=\"sitename\">Lemon Digital</span></a><div class=\"footer-contact pt-3\"><p>Ecommerce Enabler</p><p>Agency hàng đầu tại Việt Nam</p><p class=\"mt-3\"><strong>Phone:</strong> <span>0938787735</span></p><p><strong>Email:</strong> <span>hi@lemondigital.vn</span></p></div><div class=\"social-links d-flex mt-4\"><a href=\"\"><i class=\"bi bi-twitter-x\"></i></a> <a href=\"\"><i class=\"bi bi-facebook\"></i></a> <a href=\"\"><i class=\"bi bi-instagram\"></i></a> <a href=\"\"><i class=\"bi bi-linkedin\"></i></a></div></div><div class=\"col-lg-2 col-md-3 footer-links\"><h4>Liên kết hữu ích</h4><ul><li><a href=\"#\">Trang chủ</a></li><li><a href=\"#\">Về chúng tôi</a></li><li><a href=\"#\">Dịch vụ</a></li><li><a href=\"#\">Điều khoản dịch vụ</a></li><li><a href=\"#\">Chính sách bảo mật</a></li></ul></div><div class=\"col-lg-2 col-md-3 footer-links\"><h4>Dịch vụ của chúng tôi</h4><ul><li><a href=\"#\">Set up gian hàng</a></li><li><a href=\"#\">Tư vấn eCommerce</a></li><li><a href=\"#\">Thuê studio & Host</a></li><li><a href=\"#\">Quảng cáo TikTok</a></li><li><a href=\"#\">Quảng cáo Shopee</a></li></ul></div><div class=\"col-lg-4 col-md-12 footer-newsletter\"><h4>Nhận tin tức từ chúng tôi</h4><p>Đăng ký để nhận những tin tức mới nhất về dịch vụ và kiến thức eCommerce!</p><form action=\"forms/newsletter.php\" method=\"post\" class=\"php-email-form\"><div class=\"newsletter-form\"><input type=\"email\" name=\"email\" placeholder=\"Email của bạn\"><input type=\"submit\" value=\"Đăng ký\"></div><div class=\"loading\">Đang xử lý</div><div class=\"error-message\"></div><div class=\"sent-message\">Cảm ơn bạn đã đăng ký nhận tin!</div></form></div></div></div><div class=\"container copyright text-center mt-4\"><p>© <span>Copyright</span> <strong class=\"px-1 sitename\">Lemon Digital</strong> <span>All Rights Reserved</span></p><div class=\"credits\"><!-- All the links in the footer should remain intact. --><!-- You can delete the links only if you've purchased the pro version. --><!-- Licensing information: https://bootstrapmade.com/license/ --><!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->Ecommerce Enabler | Best Enabler & TSP Of The Year</div></div></footer><!-- Scroll Top --><a href=\"#\" id=\"scroll-top\" class=\"scroll-top d-flex align-items-center justify-content-center\"><i class=\"bi bi-arrow-up-short\"></i></a><!-- Preloader --><div id=\"preloader\"></div><!-- Vendor JS Files --><script src=\"/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js\"></script><script src=\"/static/assets/vendor/php-email-form/validate.js\"></script><script src=\"/static/assets/vendor/aos/aos.js\"></script><script src=\"/static/assets/vendor/glightbox/js/glightbox.min.js\"></script><script src=\"/static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js\"></script><script src=\"/static/assets/vendor/isotope-layout/isotope.pkgd.min.js\"></script><script src=\"/static/assets/vendor/waypoints/noframework.waypoints.js\"></script><script src=\"/static/assets/vendor/swiper/swiper-bundle.min.js\"></script><!-- Main JS File --><script src=\"/static/assets/js/main.js\"></script>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

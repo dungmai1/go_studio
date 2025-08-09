@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"go_studio/internal/helpers"
 	"go_studio/internal/templates"
 	"net/http"
 )
@@ -13,9 +12,8 @@ func NewServiceHandLer() *ServiceHandLer {
 }
 
 func (h *ServiceHandLer) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	seoData := helpers.NewServicePage()
 	c := templates.Service()
-	err := templates.Layout(c, "services-page", "service", seoData).Render(r.Context(), w)
+	err := templates.Layout(c, "services-page","service").Render(r.Context(), w)
 
 	if err != nil {
 		http.Error(w, "Error rendering template", http.StatusInternalServerError)

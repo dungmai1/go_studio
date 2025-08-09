@@ -1,9 +1,7 @@
 package templates
 
-import "go_studio/internal/models"
-
-templ Layout(contents templ.Component, classBody string, currentPage string, seoData models.SEOData) {
-	@Head(seoData)
+templ Layout(contents templ.Component, classBody string, currentPage string) {
+	@Head()
 	<body class={ classBody }>
 		@Header(currentPage)
 		@contents
@@ -11,36 +9,13 @@ templ Layout(contents templ.Component, classBody string, currentPage string, seo
 	</body>
 }
 
-templ Head(seoData models.SEOData) {
+templ Head() {
 	<head>
 		<meta charset="utf-8"/>
 		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-		
-		<!-- SEO Meta Tags -->
-		<title>{ seoData.Title }</title>
-		<meta name="description" content={ seoData.Description }/>
-		<meta name="keywords" content={ seoData.Keywords }/>
-		
-		<!-- Open Graph Meta Tags -->
-		<meta property="og:title" content={ seoData.Title }/>
-		<meta property="og:description" content={ seoData.Description }/>
-		<meta property="og:image" content={ seoData.OGImage }/>
-		<meta property="og:url" content={ seoData.CanonicalURL }/>
-		<meta property="og:type" content="website"/>
-		<meta property="og:site_name" content="Lemon Digital"/>
-		
-		<!-- Twitter Card Meta Tags -->
-		<meta name="twitter:card" content="summary_large_image"/>
-		<meta name="twitter:title" content={ seoData.Title }/>
-		<meta name="twitter:description" content={ seoData.Description }/>
-		<meta name="twitter:image" content={ seoData.OGImage }/>
-		
-		
-		<!-- Structured Data -->
-		if seoData.Schema != "" {
-			<script type="application/ld+json">{ seoData.Schema }</script>
-		}
-		
+		<title>Lemon Digital - Agency hàng đầu tại Việt Nam | Ecommerce Enabler</title>
+		<meta name="description" content="Lemon Digital - Đối tác hàng đầu của TikTok, Shopee, Haravan và Lazada. Đồng hành cùng hơn 100 thương hiệu phát triển trên nền tảng số."/>
+		<meta name="keywords" content="Lemon Digital, Agency, TikTok, Shopee, eCommerce, Digital Marketing, Livestream, Quảng cáo"/>
 		<!-- Favicons -->
 		<link href="/static/assets/img/favicon.png" rel="icon"/>
 		<link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>

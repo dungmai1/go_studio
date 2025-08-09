@@ -3,26 +3,9 @@ root = "."
 tmp_dir = "tmp"
 
 [build]
-# Build command - templ đã được watch riêng
-cmd = "go build -o tmp/main.exe ./cmd/main.go"
-bin = "tmp/main.exe"
-full_bin = "tmp/main.exe"
-# Watch Go files và generated templ files
-include_ext = ["go"]
-include_dir = ["cmd", "internal"]
-exclude_dir = ["tmp", "bin", "static", ".git", "node_modules"]
-exclude_file = []
-# Delay để templ generate xong trước
-delay = 1000
+cmd = "go build -o tmp/main ./cmd/main.go"
+bin = "tmp/main"
+full_bin = "tmp/main"
 
 [log]
 time = true
-
-[color]
-main = "magenta"
-watcher = "cyan" 
-build = "yellow"
-runner = "green"
-
-[misc]
-clean_on_exit = true
